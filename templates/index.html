@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+	<form action="/" method="post">
+		<input type="radio" name="user_choice" value='0'> rock <br>
+		<input type="radio" name="user_choice" value='2'> paper <br>
+		<input type="radio" name="user_choice" value='1'> scissors <br>
+		<input type="submit" value="shoot!">
+	</form>
+
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				<p> {{ message }} </p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+
+{% endblock %}
