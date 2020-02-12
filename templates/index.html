@@ -17,4 +17,8 @@
 		{% endif %}
 	{% endwith %}
 
+	{% for winners in wins %}
+		<p>{{ winners["name"] }}: {{ winners["count"] }}</p>
+	{% endfor %}
+
 {% endblock %}
